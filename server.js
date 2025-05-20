@@ -21,7 +21,7 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 // CORS allowed frontend origins
-const allowedOrigins = ['https://digicart-frontend.vercel.app/'];
+const allowedOrigins = ['http://localhost:5173'];
 
 app.use(cors({
   origin: function (origin, callback) {
@@ -66,7 +66,7 @@ const startServer = async () => {
     await connectDB();
     await connectCloudinary();
     app.listen(PORT, () => {
-      console.log(`🚀 Server running on ${PORT}`);
+      console.log(`🚀 Server running on http://localhost:${PORT}`);
     });
   } catch (err) {
     console.error("❌ Failed to start server:", err.message);
