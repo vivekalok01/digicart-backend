@@ -18,7 +18,7 @@ import orderRouter from './routes/orderRoute.js';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 
 // CORS allowed frontend origins
 const allowedOrigins = process.env.FRONTEND_URL;
